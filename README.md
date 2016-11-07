@@ -16,7 +16,7 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 
 ![](http://i.imgur.com/49hBonE.png)
 
-在浏览器中访问EasyNVR部署的机器地址，跳转到登陆页面，默认用户名/密码为admin/admin
+在浏览器中访问EasyNVR部署的机器地址，端口默认为18180（http://ip:18180），跳转到登陆页面，默认用户名/密码为admin/admin
 
 ![](http://i.imgur.com/a86OOPP.png)
 
