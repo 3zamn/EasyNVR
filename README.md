@@ -1,6 +1,46 @@
 # 简介 #
 
-EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对接配置、CDN配置等，将统监控行业里面的高清网络摄像机IP Camera、NVR、移动拍摄设备接入到EasyNVR，EasyNVR能够将这些视频源的音视频数据采集到设备端，进行全平台终端直播、录像存储、录像检索和录像回放。并且EasyNVR能够将视频源的直播数据对接到第三方视频平台、CDN网络，实现互联网直播分发。
+EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对接配置、CDN配置等，将统监控行业里面的高清网络摄像机IP Camera、NVR、移动拍摄设备接入到EasyNVR，EasyNVR能够将这些视频源
+的音视频数据采集到设备端，进行全平台终端直播、录像存储、录像检索和录像回放。并且EasyNVR能够将视频源的直播数据对接到第三方视频平台、CDN网络，实现互联网直播分发。
+
+# 功能 #
+
+**1. 通过RTSP协议接入摄像机**
+
+**2. 支持Onvif协议**
+
+**3. 实时视频观看，支持RTMP、HLS**
+
+**4. 支持录像、录像策略（暂未开放）**
+
+**5. 支持多种存储设备接入，本地硬盘、iSCSI协议设备、阿里云存储（暂未开放）**
+
+**6. 支持录像回放（暂未开放）**
+
+**7. 支持第三方平台接入（暂支持EasyDarwin云平台接入）**
+
+**8. 支持CDN接入（暂未开放）**
+
+**9. 支持网页配置管理**
+
+**10. 支持用户管理，权限验证**
+
+# 更新记录 #
+
+EasyNVR Windows v1.1.16.1107 (2016.11.08)
+
+- 网页登陆配置
+
+- 用户管理、认证
+
+- 摄像机RTSP/Onvif接入
+
+- 实时视频预览，支持手机浏览器、微信、QQ等访问
+
+- EasyNVR本地配置
+
+- 支持接入EasyDarwin云平台
+
 
 # 使用 #
 
@@ -32,7 +72,7 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 
 ![](http://www.easydarwin.org/github/images/easynvr/07.png)
 
-弹出配置页，并输入接入摄像机的ip地址、端口、rtsp地址、用户名、密码等，支持Onvif控制的可以填入Onvif地址，配置完成后点击确定
+弹出配置页，并输入接入摄像机的IP地址、端口、RTSP地址、用户名、密码等，支持Onvif控制的可以填入Onvif地址，配置完成后点击确定
 
 ![](http://www.easydarwin.org/github/images/easynvr/08.png)
 
@@ -40,7 +80,7 @@ EasyNVR支持Onvif发现以及探测，在配置时选择Onvif，勾选Onvif探�
 
 ![](http://www.easydarwin.org/github/images/easynvr/09.png)
 
-点击探测ip输入框时，会出现发现的Onvif摄像机，选中要配置的摄像机
+点击探测IP输入框时，会出现发现的Onvif摄像机，选中要配置的摄像机
 
 ![](http://www.easydarwin.org/github/images/easynvr/10.png)
 
@@ -66,7 +106,7 @@ EasyNVR支持Onvif发现以及探测，在配置时选择Onvif，勾选Onvif探�
 
 # 参数配置 #
 
-本地配置页面用于配置EasyNVR运行参数，包括Web服务器地址，rtmp地址等
+本地配置页面用于配置EasyNVR运行参数，包括Web服务器地址，RTMP地址等
 
 ![](http://www.easydarwin.org/github/images/easynvr/16.png)
 
