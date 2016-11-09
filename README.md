@@ -110,6 +110,35 @@ EasyNVR支持Onvif发现以及探测，在配置时选择Onvif，勾选Onvif探�
 
 ![](http://www.easydarwin.org/github/images/easynvr/16.png)
 
+EasyNVR初次运行时读取本地的IP地址并写入配置，若后期需要更改访问的IP地址或者进行公网映射，则可以进行更改
+
+![](http://www.easydarwin.org/github/images/easynvr/17.png)
+
+将IP地址和端口更改为更新的地址或者映射的公网IP和端口
+
+![](http://www.easydarwin.org/github/images/easynvr/18.png)
+
+点击保存，重启EasyNVR生效
+
+![](http://www.easydarwin.org/github/images/easynvr/19.png)
+
+关闭EasyNVR并重新运行start.bat
+
+![](http://www.easydarwin.org/github/images/easynvr/02.png)
+
+重启完成后访问EasyNVR，更改成功
+
+![](http://www.easydarwin.org/github/images/easynvr/20.png)
+
+EasyNVR支持修改快照的获取间隔（单位为妙），保存重启后生效
+
+![](http://www.easydarwin.org/github/images/easynvr/21.png)
+
+第三方平台接入配置，配置接入EasyDarwin云平台，输入接入平台的IP，端口等信息进行接入，保存重启后生效
+
+![](http://www.easydarwin.org/github/images/easynvr/22.png)
+
+
 ## 获取更多信息 ##
 
 邮件：[support@easydarwin.org](mailto:support@easydarwin.org) 
