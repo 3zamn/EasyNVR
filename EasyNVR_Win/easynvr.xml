@@ -6,39 +6,14 @@
 		<PREF NAME="error_logfile_interval" TYPE="UInt32" >7</PREF>
 		<PREF NAME="error_logfile_size" TYPE="UInt32" >10240</PREF>
 		<PREF NAME="error_logfile_verbosity" TYPE="UInt32" >2</PREF>
+		<PREF NAME="screen_logging" TYPE="Bool16" >true</PREF>
+		<PREF NAME="error_logging" TYPE="Bool16" >true</PREF>
 		<PREF NAME="run_num_threads" TYPE="UInt32" >3</PREF>
 		<PREF NAME="pid_file" >EasyDarwin.pid</PREF>
-		<PREF NAME="run_num_blocking_threads" TYPE="UInt32" >1</PREF>
-		<PREF NAME="screen_logging" TYPE="bool" >true</PREF>
-		<PREF NAME="error_logging" TYPE="bool" >true</PREF>
-		<PREF NAME="force_logs_close_on_write" TYPE="bool" >false</PREF>
-		<PREF NAME="bind_ip_addr" >0</PREF>
-		<PREF NAME="monitor_lan_port" TYPE="UInt16" >10010</PREF>
-		<PREF NAME="monitor_wan_port" TYPE="UInt16" >10010</PREF>
-		<PREF NAME="monitor_wan_ip" >0.0.0.0</PREF>
-		<PREF NAME="channel_snap_interval" TYPE="UInt16" >120</PREF>
+		<PREF NAME="force_logs_close_on_write" TYPE="Bool16" >false</PREF>
+		<PREF NAME="run_num_blocking_threads" TYPE="UInt32" >1</PREF>
 		<PREF NAME="thrid_part_platform" ></PREF>
 	</SERVER>
 	<MODULE NAME="QTSSErrorLogModule" ></MODULE>
-	<MODULE NAME="EasyNVRModule" >
-		<PREF NAME="channels_prefs_file" >channels.xml</PREF>
-	</MODULE>
-	<MODULE NAME="EasyCMSModule" >
-		<PREF NAME="easycms_ip" >127.0.0.1</PREF>
-		<PREF NAME="easycms_port" TYPE="UInt16" >10001</PREF>
-		<PREF NAME="device_serial" >001002000002</PREF>
-		<PREF NAME="device_name" >NVR002</PREF>
-		<PREF NAME="device_key" >123456</PREF>
-		<PREF NAME="device_tag" >dev</PREF>
-		<PREF NAME="keep_alive_interval" TYPE="UInt32" >30</PREF>
-	</MODULE>
-	<MODULE NAME="EasyDarwinModule" >
-		<PREF NAME="easycms_ip" >www.easydss.com</PREF>
-		<PREF NAME="easycms_port" TYPE="UInt16" >10000</PREF>
-		<PREF NAME="device_serial" >NVR00000002</PREF>
-		<PREF NAME="device_name" >NVR001</PREF>
-		<PREF NAME="device_key" >123456</PREF>
-		<PREF NAME="device_tag" >dev</PREF>
-		<PREF NAME="keep_alive_interval" TYPE="UInt32" >30</PREF>
-	</MODULE>
+	<MODULE NAME="EasyNVRModule" ></MODULE>
 </CONFIGURATION>
