@@ -66,7 +66,7 @@ EasyNVR Windows v1.1.16.1107 (2016.11.08)
 
 ![](http://www.easydarwin.org/github/images/easynvr/03.png)
 
-在浏览器中访问EasyNVR部署的机器地址，端口默认为18180（http://ip:18180），跳转到登陆页面，默认用户名/密码为admin/admin
+在浏览器中访问EasyNVR部署的机器地址，端口默认为10080（http://ip:10080），跳转到登陆页面，默认用户名/密码为admin/admin
 
 ![](http://www.easydarwin.org/github/images/easynvr/04.png)
 
