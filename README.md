@@ -149,6 +149,12 @@ EasyNVR支持修改快照的获取间隔（单位为妙），保存重启后生�
 ![](http://www.easydarwin.org/github/images/easynvr/22.png)
 
 
+##公网观看##
+- 通过端口映射：将EasyNVR服务需要的10080和10035两个端口通过路由器进行端口映射到公网，再通过公网地址进行访问就可以了；
+
+- 通过接入到EasyDarwin云平台：详细流程后续附上！
+
+
 ## 获取更多信息 ##
 
 邮件：[support@easydarwin.org](mailto:support@easydarwin.org) 
