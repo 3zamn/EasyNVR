@@ -6,8 +6,6 @@
 
 		<PREF NAME="error_logfile_name" >Error</PREF>
 
-		<PREF NAME="error_logfile_dir" >c:\Program Files\EasyNVR\Logs\</PREF>
-
 		<PREF NAME="error_logfile_interval" TYPE="UInt32" >7</PREF>
 
 		<PREF NAME="error_logfile_size" TYPE="UInt32" >10240</PREF>
@@ -20,7 +18,7 @@
 
 		<PREF NAME="run_num_threads" TYPE="UInt32" >3</PREF>
 
-		<PREF NAME="pid_file" >EasyDarwin.pid</PREF>
+		<PREF NAME="pid_file" >easynvr.pid</PREF>
 
 		<PREF NAME="force_logs_close_on_write" TYPE="Bool16" >false</PREF>
 
