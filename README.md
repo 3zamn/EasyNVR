@@ -161,6 +161,6 @@ EasyNVR支持修改快照的获取间隔（单位为妙），保存重启后生�
 
 WEB：[www.easydarwin.org](http://www.easydarwin.org)
 
-Copyright &copy; EasyDarwin.org 2012-2016
+Copyright &copy; EasyDarwin.org 2012-2017
 
 ![EasyDarwin](http://www.easydarwin.org/skin/easydarwin/images/wx_qrcode.jpg)
