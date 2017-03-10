@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    	<title>EasyNVR</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="./adminlte-2.3.6/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./adminlte-2.3.6/font-awesome-4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./adminlte-2.3.6/ionicons-2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="./adminlte-2.3.6/dist/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="./adminlte-2.3.6/dist/css/skins/skin-green.min.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+	<script src="./adminlte-2.3.6/plugins/jQuery/jquery-2.2.3.min.js"></script>
+	<script src="./adminlte-2.3.6/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./adminlte-2.3.6/dist/js/app.js"></script>
+	<script src="./adminlte-2.3.6/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+	<link rel="stylesheet" href="./adminlte-2.3.6/plugins/iCheck/all.css">
+	<script src="./adminlte-2.3.6/plugins/iCheck/icheck.min.js"></script>
+	<script src="./adminlte-2.3.6/plugins/md5/jquery.md5.js"></script>
+	<script src="./adminlte-2.3.6/plugins/input-number/jquery.inputnumber.js"></script>
+	<link rel="stylesheet" href="./adminlte-2.3.6/plugins/gritter/jquery.gritter.css">
+	<script src="./adminlte-2.3.6/plugins/gritter/jquery.gritter.js"></script>
+	<link rel="stylesheet" href="./adminlte-2.3.6/plugins/loadmask/jquery.loadmask.css">
+	<script src="./adminlte-2.3.6/plugins/loadmask/jquery.loadmask.min.js"></script>
+	<script src="./adminlte-2.3.6/plugins/validator/validator.min.js"></script>
+	<script src="./adminlte-2.3.6/plugins/bootbox/bootbox.min.js"></script>
+	<script src="./adminlte-2.3.6/plugins/cookie/jquery.cookie.min.js"></script>
+	<script src="./easyui/easyloader.js"></script>
+
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/common.js"></script>
+    <script src="./adminlte-2.3.6/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="./adminlte-2.3.6/plugins/typeahead/bootstrap3-typeahead.min.js"></script>
+    <script src="./adminlte-2.3.6/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <link rel="stylesheet" href="./adminlte-2.3.6/plugins/bootstrap-switch/css/bootstrap3/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="./adminlte-2.3.6/plugins/bootstrap-pagination/bootstrap-pagination.css"/>
+    <script src="./adminlte-2.3.6/plugins/bootstrap-pagination/bootstrap-pagination.js"></script>    
+    <style>
+        .channel-info table td {
+            word-break: keep-all;
+            white-space: nowrap;
+        }
+
+        .bootstrap-switch-off .bootstrap-switch-label {
+            text-align: center;
+        }
+
+        .bootstrap-switch-off .bootstrap-switch-label:before {
+            content : "\300b";
+        }
+
+        .bootstrap-switch-on .bootstrap-switch-label:before {
+            content : "\300a";
+        }
+        
+        .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success, .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success {
+            color: #fff;
+            background: #00a65a;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-green sidebar-mini hide">
+	<script>
+	    try {
+	        $(document).on("transitionend", ".content-wrapper", function () {
+	            localStorage["sidebar-collapse"] = $("body").hasClass("sidebar-collapse") ? "sidebar-collapse" : "";
+	        });
+	        $("body").addClass(localStorage["sidebar-collapse"]);
+	    } catch (e) {
+	    }
+	</script>
+	<div class="wrapper">
+
+		<header class="main-header">
+
+			<a href="#" class="logo">
+				<!-- mini logo for sidebar mini 50x50 pixels -->
+				<span class="logo-mini">NVR</span>
+				<!-- logo for regular state and mobile devices -->
+				<span class="logo-lg">EasyNVR</span>
+			</a>
+
+			<nav class="navbar navbar-static-top" role="navigation">
+				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+				</a>
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<li>
+	                        <a id="btn-modify-pwd" href="#" data-toggle="modal" data-target="#pwd-dlg"><i
+	                                class="fa fa-key"></i> 修改密码</a>
+	                    </li>
+	                    <li>
+	                        <a id="btn-logout" href="javascript:void(0);"><i class="fa fa-power-off"></i> 注 销</a>
+	                    </li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<aside class="main-sidebar main-sidebar-gray">
+			<section class="sidebar">
+				<ul class="sidebar-menu">
+					<li class="treeview">
+						<a href="/">
+							<i class="fa fa-video-camera"></i>
+							<span>视频广场</span>
+						</a>
+					</li>
+					<li class="treeview">
+						<a href="/channel.html">
+							<i class="fa fa-road"></i>
+							<span>通道配置</span>
+						</a>
+					</li>
+					<li class="treeview">
+						<a href="/config.html">
+							<i class="fa fa-cogs"></i>
+							<span>本地配置</span>
+						</a>
+					</li>
+					<!--li class="treeview">
+						<a href="/recordpath.html">
+							<i class="fa fa-dashboard"></i>
+							<span>存储配置</span>
+						</a>
+					</li-->
+					<li class="treeview">
+						<a href="/about.html">
+							<i class="fa fa-support"></i>
+							<span>版本信息</span>
+							<span class="pull-right-container">
+								<button id="reboot-btn" class="label pull-right btn btn-sm btn-primary">
+									<i class="fa fa-power-off text-orange"></i> 重启
+								</button>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</aside>
+
+	    <div class="modal fade" id="pwd-dlg">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                        <span aria-hidden="true">&times;</span>
+	                    </button>
+	                    <h4 class="modal-title">修改密码</h4>
+	                </div>
+	                <form id="pwd-form" class="form-horizontal" data-toggle="validator" data-disable="false">
+	                    <div class="modal-body">
+	                        <div class="form-group">
+	                            <label for="input-old-pwd" class="col-sm-3 control-label">
+	                                原密码
+	                                <span class="text-red">*</span>
+	                                :
+	                            </label>
+	                            <div class="col-sm-8">
+	                                <input id="input-old-pwd" type="password" name="oldPwd" class="form-control" required>
+	                                <span class="help-block with-errors"></span>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label for="input-new-pwd" class="col-sm-3 control-label">
+	                                新密码
+	                                <span class="text-red">*</span>
+	                                :
+	                            </label>
+	                            <div class="col-sm-8">
+	                                <input id="input-new-pwd" type="password" name="newPwd" class="form-control" required>
+	                                <span class="help-block with-errors"></span>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <label for="input-new-pwd2" class="col-sm-3 control-label">
+	                                确认新密码
+	                                <span class="text-red">*</span>
+	                                :
+	                            </label>
+	                            <div class="col-sm-8">
+	                                <input id="input-new-pwd2" type="password" name="newPwd2" class="form-control"
+	                                       data-match="#input-new-pwd"
+	                                       data-match-error="两次密码输入不一致" required>
+	                                <span class="help-block with-errors"></span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="modal-footer">
+	                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	                        <button type="submit" class="btn btn-primary">确定</button>
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+
+		<div class="content-wrapper">
+			<section class="content-header">
+				<ol class="breadcrumb">
+					<li><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
+				</ol>
+			</section>
+			<section class="content">
+
+<script>
+	//var openurls = ["/","/about.html"];
+	var token = $.cookie("token")||"";
+	//if(!token && $.inArray(location.pathname,openurls) < 0){
+	//	top.location.href = "/login.html";
+	//}
+	if(!token){
+		$(".treeview [href=/config.html]").closest(".treeview").hide();
+		$(".treeview [href=/channel.html]").closest(".treeview").hide();
+	}
+	$("#btn-logout").click(function(){
+		$.get(_url + "/logout");
+		$.cookie("token","",{expires : -1});
+		$.cookie("username","",{expires : -1});
+		top.location.href = "/login.html";
+	})
+	$("#reboot-btn").click(function(){
+		var $this = $(this);
+		bootbox.confirm({
+			title : "提示",
+			message : "确定要重启吗?",
+			buttons : {
+				confirm : {
+					label : "确定",
+					className : "btn-primary btn-sm",
+				},
+				cancel : {
+					label : "取消",
+					className : "btn-sm",
+				}
+			},
+			callback : function(result) {
+				if (result) {
+					$this.prop("disabled",true);
+					$.ajax({
+						type : "GET",
+						url : _url + "/restart",
+						success : function(data){
+							$.gritter.add({
+								text : '重启中...',
+								class_name : 'gritter-info'
+							});
+						},
+						complete : function(xhr, ts){
+							$this.prop("disabled",false);
+						}
+					})
+				}
+			}
+		});										
+		return false;
+	})
+	$('#pwd-form').validator().on('submit', function (e) {
+		if (!e.isDefaultPrevented()) {
+			e.preventDefault();
+			var _oldPwd = $("#pwd-form [name=oldPwd]").val();
+			var _newPwd = $("#pwd-form [name=newPwd]").val();
+			if (!/^[a-zA-Z0-9]+$/.test(_newPwd) || _newPwd.length > 16) {
+				$.gritter.add("密码长度不超过16字符，为英文或数字!");
+				return false;
+			}
+			$("#pwd-form [type=submit]").prop("disabled",true);
+			$.ajax({
+				type : "GET",
+				url : _url + "/modifypassword",
+				data : {
+					oldpassword : $.md5(_oldPwd),
+					newpassword : $.md5(_newPwd)
+				},
+				global : false,
+				success : function(data){
+					try{
+						console.log(data);
+						var ret = JSON.parse(data);
+						$.cookie("token",ret.EasyDarwin.Body.Token);
+						$.gritter.add({
+							text : "修改密码成功!",
+							class_name : "gritter-info"
+						});
+						$("#pwd-dlg").modal("hide");
+						return;
+					}catch(e){}
+					$.gritter.add("修改密码不成功!");
+				},
+				error : function(xhr,ts,err){
+					$.gritter.add("修改密码不成功!");
+				},
+				complete : function(){
+					$("#pwd-form [type=submit]").prop("disabled",false);
+				}
+			});
+		}
+	});	
+</script>
+<script>
+	$(".breadcrumb").append("<li class='active'><i class='fa fa-road'></i> 通道配置</li>");
+</script>
+
+<div class="container-fluid no-padding">
+    <div class="channels"></div>
+</div>
+
+<div class="modal fade" id="channel-dlg">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">通道配置</h4>
+            </div>
+            <form id="channel-form" class="form-horizontal" data-toggle="validator">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="input-name" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            通道名称
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-name" type="text" name="Name" class="form-control" required>
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-channel" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            通道号
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-channel" type="text" name="Channel" class="form-control" pattern="^\d+$" readonly="readonly" required>
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkbox-enable" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            是否启用
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="checkbox" class="enable-toggle">
+                            <input type="hidden" id="input-enable" name="Enable" value="0" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-protocol" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            摄像机接入类型
+                        </label>
+                        <div class="col-sm-7">
+                            <div class="input-group">
+                                <select name="Protocol" id="input-protocol" class="form-control">
+                                    <option value="RTSP" selected="selected">RTSP</option>
+                                    <option value="ONVIF">ONVIF</option>
+                                </select>
+                                <span class="input-group-addon">
+                                    <div class="checkbox" style="min-height:0;padding:0;">
+                                        <label style="line-height:20px;">
+                                            <input id="checkbox-probe" type="checkbox" style="margin-top:4px;"> ONVIF 探测
+                                        </label>
+                                    </div>
+                                </span>
+
+                            </div>
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group probe">
+                        <label for="input-protocol" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            探测ONVIF IP
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="text" id="probe-ip" class="form-control" data-provide="typeahead">
+                        </div>
+                    </div>
+                    <div class="form-group probe">
+                        <label for="input-protocol" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            探测ONVIF用户名
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="text" id="probe-username" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group probe">
+                        <label for="input-protocol" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            探测ONVIF密码
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="password" id="probe-password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group probe">
+                        <div class="col-sm-7 col-sm-offset-4">
+                            <button class="btn btn-primary" type="button" id="probe-btn">探测</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-ip" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            摄像机IP
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-ip" type="text" class="form-control" name="IP" required>
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-port" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            摄像机端口
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-port" type="text" class="form-control" name="Port" pattern="^[0-9]+$" required>
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-rtsp" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            摄像机接入RTSP地址
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-rtsp" type="text" class="form-control" name="RTSP">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-onvif" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            摄像机接入ONVIF地址
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-onvif" type="text" class="form-control" name="ONVIF">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-username" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            摄像机用户名
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-username" type="text" class="form-control" name="UserName">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-password" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            摄像机密码
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-password" type="text" class="form-control" name="Password">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-cdn" class="col-sm-4 control-label">
+                            <!--<span class="text-red">*</span>-->
+                            接入CDN地址
+                        </label>
+                        <div class="col-sm-7">
+                            <input id="input-cdn" type="text" class="form-control" name="CDN">
+                            <span class="help-block with-errors"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary">确定</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script>
+    var channelHtml = "";
+	$(function(){
+        $("#checkbox-probe").change(function(){
+            if($(this).prop("checked")){
+                $("#channel-form .form-group.probe").show("fast");
+            }else{
+                $("#channel-form .form-group.probe").hide("fast");
+            }
+        })
+        $("#probe-ip").typeahead({
+            showHintOnFocus : 'all',
+            minLength : 0,
+            delay : 300,
+            source : function(query,process){
+                var ips = [];
+                $.ajax({
+                    type : "GET",
+                    url : _url + "/discoverdevices",
+                    async : false,
+                    success : function(data){
+                        try{
+                            var ret = JSON.parse(data);
+                            $.each(ret.EasyDarwin.Body.Channels,function(i,a){
+                                ips.push(a["IP"]);
+                            })
+                        }catch(e){
+                            console.log(e);
+                        }
+                    }
+                })
+                if(ips.length == 0 && $.cookie('probe-ips')){
+                    ips = $.cookie('probe-ips').split(',');
+                }
+                process(ips);
+            },
+            items : 'all',
+            fitToElement : true
+        })
+        function renderChannel($channel){
+            var channel = $channel.data("channel");
+            $channel.find('input.enable-toggle').bootstrapSwitch("destroy").bootstrapSwitch({
+                size : 'mini',
+                onColor : 'success',
+                onText : '已启用',
+                offText : '已禁用',
+                state : channel["Enable"] == '1',
+                labelWidth : 10
+            });
+            $channel.find(".panel-body").niceScroll();
+            for(var p in channel){
+                $channel.find("[field={0}]".format(p)).text(channel[p]);
+            }           
+        }
+        function renderPager(channels){
+            function pageChanged(idx,size){
+                var _channels = channels.slice(idx*size, idx*size + size);
+                $(".channels").empty();
+                if(_channels.length == 0){
+                    $(".channels").append("<div class='alert alert-info' role='alert'>没有通道配置</div>")
+                }
+                $.each(_channels,function(i,channel){
+                    var $channel = $(channelHtml);
+                    $(".channels").append($channel);
+                    $channel.data("channel",channel);
+                    renderChannel($channel);
+                })
+            }
+            var $nav = $("<nav class='text-center'><ul class='pagination'></ul></nav>");
+            $(".container-fluid").append("<div class='clearfix'></div>").append($nav);
+            var $ul = $nav.find("ul");
+            var pager = BootstrapPagination($ul,{
+                layoutScheme: "firstpage,prevpage,pagenumber,nextpage,lastpage",
+                total : channels.length,
+                pageIndex : 0,
+                pageGroupSize : 3,
+                pageSize : 4,
+                pageChanged : pageChanged
+            })
+            pager.pageIndex(0);
+        }
+        function validateChannel(channel){
+            var allowEmptys = ["CDN","UserName","Password"];
+            if(channel["Protocol"] == "RTSP"){
+                allowEmptys.push("ONVIF");
+            } else {
+                allowEmptys.push("RTSP");
+            }
+            for(var key in channel){
+                if(!(new String(channel[key]).trim()) && $.inArray(key,allowEmptys) < 0){
+                    var fieldName = $(channelHtml).find("table td[field={0}]".format(key)).prev().text()||key;
+                    $.gritter.add({
+                        text : '请完善信息 : ' + fieldName,
+                        class_name : 'gritter-error'
+                    })
+                    return key;
+                }
+            }
+            return "";
+        }
+        $.get("/template/channel-template.html").then(function(data,ts,xhr){
+            channelHtml = data;
+            return $.get(_url + "/getchannelsconfig");
+        }).done(function(data){
+            try{
+                var ret = JSON.parse(data);
+                ret.EasyDarwin.Body.Channels.sort(function(a,b){
+                    return parseInt(a["Channel"]) - parseInt(b["Channel"]);
+                })
+                renderPager(ret.EasyDarwin.Body.Channels);
+            }catch(e){
+                console.log(e);
+            }
+        })    
+
+        $(document).on("click",".channel-info .btn-config",function(e){
+            var $channel = $(this).closest(".channel-info");
+            var channel = $channel.data("channel");
+            var _channel = $.extend({},channel);
+            _channel["Protocol"] = _channel["Protocol"] || "RTSP";
+            $("#channel-form").form("load",_channel).data("$channel",$channel);
+            $("#channel-form .enable-toggle").bootstrapSwitch("destroy").bootstrapSwitch({
+                onColor : 'success',
+                onText : '已启用',
+                offText : '已禁用',
+                state : $("#channel-form [name=Enable]").val() == '1',
+                labelWidth : 15
+            });
+            $("#checkbox-probe").trigger("change");
+            $("#channel-dlg").modal("show");
+        });
+        $(document).on("switchChange.bootstrapSwitch",".channel-info .enable-toggle",function(event,state){
+            var $this = $(this);
+            var $channel = $this.closest(".channel-info");
+            var channel = $channel.data("channel");
+            if(validateChannel(channel)) {
+                renderChannel($channel);
+                return;
+            }
+            var _state = channel["Enable"];
+            channel["Enable"] = state ? '1' : '0';
+            $.get(_url + "/setchannelconfig", channel, function(data) {
+                try{
+                    var ret = JSON.parse(data);
+                    if(ret.EasyDarwin.Header.ErrorNum != "200"){
+                        throw new Error("error num != 200");
+                    }
+                    $.gritter.add({
+                        text : '配置成功, 即时生效!',
+                        class_name : 'gritter-info'
+                    });
+                }catch(e){
+                    console.log(e);
+                    $.gritter.add({
+                            text : '配置失败!',
+                            class_name : 'gritter-error'
+                    })
+                    channel["Enable"] = _state;
+                }
+                $channel.data("channel",channel);
+                renderChannel($channel);
+            });
+        })
+        $(document).on("switchChange.bootstrapSwitch","#channel-form .enable-toggle",function(event,state){
+            $("#channel-form [name=Enable]").val(state ? "1" : "0");
+        })
+        //点击探测
+        $(document).on("click","#probe-btn",function(){
+            var ip = $("#probe-ip").val();
+            var username = $("#probe-username").val();
+            var password = $("#probe-password").val();
+            if(!ip){
+                $.gritter.add("请填写探测ONVIF IP");
+                $("#probe-ip").focus();
+                return;
+            }
+            var _ips = [];
+            if($.cookie('probe-ips')){
+                _ips = $.cookie('probe-ips').split(',');
+            }
+            if(_ips.indexOf(ip) < 0){
+                while(_ips.length >= 5){
+                    _ips.splice(0,1);
+                }
+                _ips.push(ip);
+                $.cookie("probe-ips",_ips.join(','),{expires : 365});
+            }
+            // if(!username){
+            //     $.gritter.add("请填写探测ONVIF用户名");
+            //     $("#probe-username").focus();
+            //     return;
+            // }
+            // if(!password){
+            //     $.gritter.add("请填写探测ONVIF密码");
+            //     $("#probe-password").focus();
+            //     return;
+            // }
+            $.get(_url + "/probedevice",{
+                ip : ip,
+                username : username,
+                password : password
+            },function(data){
+                try{
+                    var ret = JSON.parse(data);
+                    if(!ret.EasyDarwin.Body){
+                        $.gritter.add("没有探测到结果");
+                        return;
+                    }
+                    $("#channel-form").form("load",ret.EasyDarwin.Body);
+                    $.gritter.add({
+                        text : "探测成功!",
+                        class_name : 'gritter-info'
+                    });
+                }catch(e){
+                    console.log(e);
+                }
+            })
+        })
+        $('#channel-form').validator().on('submit', function(e) {
+            if (!e.isDefaultPrevented()) {
+                e.preventDefault();
+                var formArray = $("#channel-form").serializeArray();
+                var channel = {};
+                $.map(formArray,function(n){
+                    channel[n['name']] = n['value'];
+                })
+                if(validateChannel(channel)) return;
+                $.get(_url + "/setchannelconfig", channel, function(data) {
+                    try{
+                        var ret = JSON.parse(data);
+                        if(ret.EasyDarwin.Header.ErrorNum != "200"){
+                            $.gritter.add({
+                                text : '配置失败!',
+                                class_name : 'gritter-error'
+                            })
+                            return;
+                        }
+                    }catch(e){}
+                    $.gritter.add({
+                        text : '配置成功, 即时生效!',
+                        class_name : 'gritter-info'
+                    });
+                    $("#channel-dlg").modal("hide");
+                    var $channel = $("#channel-form").data("$channel");
+                    $channel.data("channel",channel);
+                    renderChannel($channel);
+                });
+            }
+        });        
+    })
+</script> </section>
+</div>
+<!-- content-wrapper -->
+
+<footer class="main-footer">
+	<div class="pull-right hidden-xs">
+		EasyNVR
+	</div>
+	<strong>Copyright &copy; 2016 <a href="#">www.easydarwin.org</a>.</strong> All rights reserved.
+</footer>
+</div>
+<!-- wrapper-->
+</body>
+
+</html>
