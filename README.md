@@ -30,93 +30,93 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 
 下载EasyNVR项目文件，解压
 
-![](http://www.easydarwin.org/github/images/easynvr2017/01.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/01.png)
 
 运行start.bat
 
-![](http://www.easydarwin.org/github/images/easynvr2017/02.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/02.png)
 
 会有如下界面
 
-![](http://www.easydarwin.org/github/images/easynvr2017/03.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/03.png)
 
 在浏览器中访问EasyNVR部署的机器地址，端口默认为10080（http://ip:10080），跳转到登陆页面，默认用户名/密码为admin/admin
 
-![](http://www.easydarwin.org/github/images/easynvr2017/04.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/04.png)
 
 登陆后进入主页，这时视频广场是空的，因为还没有进行通道配置
 
-![](http://www.easydarwin.org/github/images/easynvr2017/05.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/05.png)
 
 点击通道配置进入通道配置页
 
-![](http://www.easydarwin.org/github/images/easynvr2017/06.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/06.png)
 
 点击要配置通道的右上角的设置按钮
 
-![](http://www.easydarwin.org/github/images/easynvr2017/07.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/07.png)
 
 弹出配置页，并输入接入摄像机的IP地址、端口、RTSP地址、用户名、密码等，支持Onvif控制的可以填入Onvif地址，配置完成后点击确定
 
-![](http://www.easydarwin.org/github/images/easynvr2017/08.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/08.png)
 
 EasyNVR支持Onvif发现以及探测，在配置时选择Onvif，勾选Onvif探测
 
-![](http://www.easydarwin.org/github/images/easynvr2017/09.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/09.png)
 
 点击探测IP输入框时，会出现发现的Onvif摄像机，选中要配置的摄像机
 
-![](http://www.easydarwin.org/github/images/easynvr2017/10.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/10.png)
 
 输入Onvif登陆用户名密码，点击探测
 
-![](http://www.easydarwin.org/github/images/easynvr2017/11.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/11.png)
 
 会将探测到的摄像机参数填充进配置窗口
 
-![](http://www.easydarwin.org/github/images/easynvr2017/12.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/12.png)
 
 配置完成后，将需要启用的摄像机设置成启用
 
-![](http://www.easydarwin.org/github/images/easynvr2017/13.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/13.png)
 
 点击视频广场页面，刚才配置的摄像机就会出现在列表中
 
-![](http://www.easydarwin.org/github/images/easynvr2017/14.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/14.png)
 
 点击即可观看实时视频
 
-![](http://www.easydarwin.org/github/images/easynvr2017/15.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/15.png)
 
 # 参数配置 #
 
 本地配置页面用于配置EasyNVR运行参数，包括Web服务器地址，RTMP地址等
 
-![](http://www.easydarwin.org/github/images/easynvr2017/16.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/16.png)
 
 EasyNVR初次运行时读取本地的IP地址并写入配置，若后期需要更改访问的IP地址或者进行公网映射，则可以进行更改
 
-![](http://www.easydarwin.org/github/images/easynvr2017/17.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/17.png)
 
 将IP地址和端口更改为更新的地址或者映射的公网IP和端口
 
-![](http://www.easydarwin.org/github/images/easynvr2017/18.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/18.png)
 
 点击保存，重启EasyNVR生效
 
-![](http://www.easydarwin.org/github/images/easynvr2017/19.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/19.png)
 
 关闭EasyNVR并重新运行start.bat
 
-![](http://www.easydarwin.org/github/images/easynvr2017/02.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/02.png)
 
 重启完成后访问EasyNVR，更改成功
 
-![](http://www.easydarwin.org/github/images/easynvr2017/20.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/20.png)
 
 EasyNVR支持修改快照的获取间隔（单位为妙），保存重启后生效
 
-![](http://www.easydarwin.org/github/images/easynvr2017/21.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/21.png)
 
 
 ##公网观看##
@@ -128,9 +128,9 @@ EasyNVR支持修改快照的获取间隔（单位为妙），保存重启后生�
 
 第三方平台接入配置，配置接入EasyDarwin云平台，输入接入平台的IP，端口等信息进行接入，保存重启后生效
 
-![](http://www.easydarwin.org/github/images/easynvr2017/22.png)
+![](http://www.easydarwin.org/github/images/easynvr201703/22.png)
 
-![](http://www.easydarwin.org/github/images/easynvr2017/23.jpg)
+![](http://www.easydarwin.org/github/images/easynvr201703/23.jpg)
 
 详细云平台方案部署参考：[https://github.com/EasyDarwin/EasyDarwin/releases](https://github.com/EasyDarwin/EasyDarwin/releases "EasyNVR")
 
