@@ -9,7 +9,7 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 
 **2. 支持Onvif协议**
 
-**3. 实时视频观看，支持RTMP、HLS**
+**3. 全平台（web/Android/iOS）观看，支持RTMP、HLS协议**
 
 **4. 支持录像、录像策略（开发测试中，敬请期待）**
 
@@ -24,32 +24,6 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 **9. 支持网页配置管理**
 
 **10. 支持用户管理，权限验证**
-
-# 更新记录 #
-
-EasyNVR Windows v1.1.16.1110 (2016.11.10)
-
-- 解决摄像机在线状态不准确
-
-- 解决接入EasyDarwin平台端口无法修改
-
-- 解决通道信息修改后快照更新问题
-
-- 解决多线程写日志的bug
-
-EasyNVR Windows v1.1.16.1107 (2016.11.08)
-
-- 网页登陆配置
-
-- 用户管理、认证
-
-- 摄像机RTSP/Onvif接入
-
-- 实时视频预览，支持手机浏览器、微信、QQ等访问
-
-- EasyNVR本地配置
-
-- 支持接入EasyDarwin云平台
 
 
 # 使用 #
@@ -144,15 +118,21 @@ EasyNVR支持修改快照的获取间隔（单位为妙），保存重启后生�
 
 ![](http://www.easydarwin.org/github/images/easynvr/21.png)
 
+
+##公网观看##
+
+### EasyNVR独立运行 ###
+通过端口映射方式，将EasyNVR服务对外需要的10080和10035两个端口通过路由器进行端口映射到公网，再通过公网地址进行访问就可以了；
+
+### 对接EasyDarwin云平台 ###
+
 第三方平台接入配置，配置接入EasyDarwin云平台，输入接入平台的IP，端口等信息进行接入，保存重启后生效
 
 ![](http://www.easydarwin.org/github/images/easynvr/22.png)
 
+![](http://www.easydarwin.org/github/images/easynvr/23.jpg)
 
-##公网观看##
-- 通过端口映射：将EasyNVR服务需要的10080和10035两个端口通过路由器进行端口映射到公网，再通过公网地址进行访问就可以了；
-
-- 通过接入到EasyDarwin云平台：详细流程后续附上！
+详细云平台方案部署参考：[https://github.com/EasyDarwin/EasyDarwin/releases](https://github.com/EasyDarwin/EasyDarwin/releases "EasyNVR")
 
 
 ## 获取更多信息 ##
