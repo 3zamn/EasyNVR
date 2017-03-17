@@ -54,7 +54,7 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 
 点击要配置通道的右上角的设置按钮
 
-![](http://www.easydarwin.org/github/images/easynvr20171/07.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/007.png)
 
 弹出配置页，并输入接入摄像机的IP地址、端口、RTSP地址、用户名、密码等，支持Onvif控制的可以填入Onvif地址，配置完成后点击确定
 
@@ -82,7 +82,7 @@ EasyNVR支持Onvif发现以及探测，在配置时选择Onvif，勾选Onvif探�
 
 点击视频广场页面，刚才配置的摄像机就会出现在列表中
 
-![](http://www.easydarwin.org/github/images/easynvr20171/014.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/14.png)
 
 点击即可观看实时视频
 
