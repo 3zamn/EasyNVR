@@ -34,7 +34,7 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 
 运行start.bat
 
-![](http://www.easydarwin.org/github/images/easynvr20171/02.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/002.png)
 
 会有如下界面
 
@@ -46,11 +46,11 @@ EasyNVR能够通过简单的摄像机通道配置、存储配置、云平台对�
 
 登陆后进入主页，这时视频广场是空的，因为还没有进行通道配置
 
-![](http://www.easydarwin.org/github/images/easynvr20171/05.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/005.png)
 
 点击通道配置进入通道配置页
 
-![](http://www.easydarwin.org/github/images/easynvr20171/06.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/006.png)
 
 点击要配置通道的右上角的设置按钮
 
@@ -78,15 +78,15 @@ EasyNVR支持Onvif发现以及探测，在配置时选择Onvif，勾选Onvif探�
 
 配置完成后，将需要启用的摄像机设置成启用
 
-![](http://www.easydarwin.org/github/images/easynvr20171/13.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/013.png)
 
 点击视频广场页面，刚才配置的摄像机就会出现在列表中
 
-![](http://www.easydarwin.org/github/images/easynvr20171/14.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/014.png)
 
 点击即可观看实时视频
 
-![](http://www.easydarwin.org/github/images/easynvr20171/15.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/015.png)
 
 # 参数配置 #
 
@@ -108,7 +108,7 @@ EasyNVR初次运行时读取本地的IP地址并写入配置，若后期需要�
 
 关闭EasyNVR并重新运行start.bat
 
-![](http://www.easydarwin.org/github/images/easynvr20171/02.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/002.png)
 
 重启完成后访问EasyNVR，更改成功
 
