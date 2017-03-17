@@ -82,7 +82,7 @@ EasyNVR支持Onvif发现以及探测，在配置时选择Onvif，勾选Onvif探�
 
 点击视频广场页面，刚才配置的摄像机就会出现在列表中
 
-![](http://www.easydarwin.org/github/images/easynvr20171/14.png)
+![](http://www.easydarwin.org/github/images/easynvr20171/186.png)
 
 点击即可观看实时视频
 
