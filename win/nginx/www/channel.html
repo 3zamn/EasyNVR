@@ -71,12 +71,14 @@
 <body class="hold-transition skin-green sidebar-mini hide">
 	<script>
 	    try {
-	        $(document).on("transitionend", ".content-wrapper", function () {
-	            localStorage["sidebar-collapse"] = $("body").hasClass("sidebar-collapse") ? "sidebar-collapse" : "";
+	        $(document).on("click", ".main-header .sidebar-toggle", function () {
+	            $(".content-wrapper").one("transitionend",function(){
+					localStorage["sidebar-collapse"] = $("body").hasClass("sidebar-collapse") ? "sidebar-collapse" : "";
+				})
 	        });
 	        $("body").addClass(localStorage["sidebar-collapse"]);
 	    } catch (e) {
-	    }
+	    }	
 	</script>
 	<div class="wrapper">
 

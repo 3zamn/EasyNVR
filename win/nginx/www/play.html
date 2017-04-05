@@ -229,9 +229,11 @@
 				},
 				ak: '515d61b893134f40bd4297b75a03494b' // 公有云平台注册即可获得accessKey
 			});
-			player.play();
 			return player;
 		}
+		player.on("ready",function(){
+			player.play();
+		})
 		function secrchRecords(){
 			var s_date = $('#searchdate').val();
 			if(s_date != '' && s_date != myformatter(search_date)){
