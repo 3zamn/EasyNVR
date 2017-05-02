@@ -2,7 +2,7 @@
 
 ### EasyNVR_v2.0.17.0412 ###
 
-下载地址：[http://pan.baidu.com/s/1cjGaKI](http://pan.baidu.com/s/1cjGaKI "EasyNVR")
+下载地址：[http://pan.baidu.com/s/1b7gurO](http://pan.baidu.com/s/1b7gurO "EasyNVR")
 
 
 ## 获取更多信息 ##
