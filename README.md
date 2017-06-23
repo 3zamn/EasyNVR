@@ -1,4 +1,8 @@
-# 版本更新记录 #
+## 方案描述 ##
+
+[http://blog.csdn.net/xiejiashu/article/details/73401647](http://blog.csdn.net/xiejiashu/article/details/73401647 "EasyNVR")
+
+## 版本更新记录 ##
 
 ### EasyNVR_v2.1.17.0510 ###
 
