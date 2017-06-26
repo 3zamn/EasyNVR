@@ -4,6 +4,10 @@
 
 ## 版本更新记录 ##
 
+### EasyNVR_v2.4.17.0623 ###
+
+下载地址：[http://pan.baidu.com/s/1gfADbbl](http://pan.baidu.com/s/1gfADbbl "EasyNVR")
+
 ### EasyNVR_v2.1.17.0510 ###
 
 下载地址：[http://pan.baidu.com/s/1geNl5fH](http://pan.baidu.com/s/1geNl5fH "EasyNVR")
