@@ -2,15 +2,9 @@
 
 [http://blog.csdn.net/xiejiashu/article/details/73401647](http://blog.csdn.net/xiejiashu/article/details/73401647 "EasyNVR")
 
-## 版本更新记录 ##
+## 方案官网及试用版本下载 ##
 
-### EasyNVR_v2.4.17.0623 ###
-
-下载地址：[http://pan.baidu.com/s/1gfADbbl](http://pan.baidu.com/s/1gfADbbl "EasyNVR")
-
-### EasyNVR_v2.1.17.0510 ###
-
-下载地址：[http://pan.baidu.com/s/1geNl5fH](http://pan.baidu.com/s/1geNl5fH "EasyNVR")
+http://www.easydarwin.org/easynvr/
 
 
 ## 获取更多信息 ##
