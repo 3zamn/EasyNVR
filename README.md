@@ -21,7 +21,7 @@ EasyNVR就完全解决了上述各种问题，实现了一个完整的、小而�
 
 ## EasyNVR适用于各种网络场景 ##
 
-![EasyNVR.com](http://www.easydarwin.org/github/images/easynvr20171/slider-v1-img-1.jpg)
+![EasyNVR.com](http://www.easydarwin.org/github/images/easynvr20171/slider-v1-img-11.jpg)
 
 ![EasyNVR.com](http://www.easydarwin.org/github/images/easynvr20171/slider-v1-img-2.jpg)
 
