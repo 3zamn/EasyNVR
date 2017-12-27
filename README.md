@@ -52,7 +52,7 @@ EasyNVR就完全解决了上述各种问题，实现了一个完整的、小而�
 
 > 上为一施工工地网页监控项目，采用的EasyNVR方案为1x
 
-![EasyNVR网页监控](http://img.blog.csdn.net/20170618113848954?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGllamlhc2h1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity)
+![EasyNVR网页监控](http://www.easydarwin.org/github/images/easynvr20171/easynvr_demo_x2_1.png)
 
 > 上为中石油地点网页监控项目，采用的EasyNVR方案为2x
 
