@@ -56,7 +56,7 @@ EasyNVR就完全解决了上述各种问题，实现了一个完整的、小而�
 
 > 上为中石油地点网页监控项目，采用的EasyNVR方案为2x
 
-![EasyNVR](http://img.blog.csdn.net/20170618114623601?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGllamlhc2h1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![EasyNVR](http://img.blog.csdn.net/20170618114623601?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveGllamlhc2h1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity)
 
 > 上为黄山某景区微信直播项目，采用的EasyNVR方案为2x
 
