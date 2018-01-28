@@ -119,7 +119,7 @@ EasyNVR就完全解决了上述各种问题，实现了一个完整的、小而�
 
 **EasyNVR**无插件直播方案：[www.EasyNVR.com](http://www.easynvr.com)
 
-Copyright &copy; EasyDarwin Team 2012-2017
+Copyright &copy; EasyDarwin Team 2012-2018
 
 ![EasyDarwin](http://www.easydarwin.org/skin/easydarwin/images/wx_qrcode.jpg)
 
