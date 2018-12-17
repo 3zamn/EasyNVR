@@ -103,8 +103,6 @@ EasyNVR就完全解决了上述各种问题，实现了一个完整的、小而�
 
 - 邮件：[support@easydarwin.org](mailto:support@easydarwin.org) 
 
-- Tel：13718530929
-
 - QQ交流群：[383501345](https://jq.qq.com/?_wv=1027&k=5yTKuyy "EasyNVR")
 
 > EasyNVR是经过2年的发展，各个平台版本已经非常稳健，目前永久使用版本需要经过授权才能商业使用，商业授权方案可以通过以上渠道进行更深入的技术与合作咨询；
