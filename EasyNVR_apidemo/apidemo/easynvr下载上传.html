@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=`, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>EasyNVR-demo10</title>
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<style>
+	#app{
+			text-align: center;
+			margin: auto;
+	}
+</style>
+<body>
+	<div id="app">
+		<h2>{{name}}</h2>
+		<el-upload class="upload-demo" drag action="http://127.0.0.1:10800/api/v1/uploadxlsx" multiple>
+			<i class="el-icon-upload"></i>
+			<div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+			<div class="el-upload__tip" slot="tip"></div>
+		</el-upload>
+		<el-button type="success" size="mini" @click="download">下载通道配文件</el-button>
+	</div>
+	<script src="https://cdn.bootcss.com/vue/2.6.6/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				name: "EasyNVR-通道上传下载demo"
+			},
+			methods: {
+				download() {
+					window.open('http://127.0.0.1:10800/api/v1/downloadxlsx');
+				}
+			},
+		})
+	</script>
+</body>
+
+</html>
